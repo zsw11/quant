@@ -1,0 +1,6 @@
+2026-02-28 15:07:30,125 [INFO] __main__: 正在加载历史数据...
+2026-02-28 15:07:30,254 [ERROR] data.provider: 获取 600519 数据失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 15:07:30,254 [ERROR] data.manager: 获取 600519 失败，已跳过: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 15:07:30,363 [ERROR] data.provider: 获取 300750 数据失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 15:07:30,364 [ERROR] data.manager: 获取 300750 失败，已跳过: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 15:07:30,364 [ERROR] __main__: 数据加载失败，请检查网络或股票代码
