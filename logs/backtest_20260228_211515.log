@@ -1,0 +1,46 @@
+2026-02-28 21:15:15,641 [INFO] __main__: 正在加载历史数据...
+2026-02-28 21:15:15,651 [INFO] data.manager: [增量更新] 600519 本地数据到 20241231，请求到 20260227，尝试联网补充...
+2026-02-28 21:15:15,651 [INFO] data.provider: 下载 600519 20250101~20260227
+2026-02-28 21:15:15,794 [WARNING] data.provider: 下载 600519 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:15:15,794 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 21:15:25,805 [INFO] data.provider: 下载 600519 20250101~20260227（第2次）
+2026-02-28 21:15:25,951 [WARNING] data.provider: 下载 600519 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:15:25,951 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 21:15:40,965 [INFO] data.provider: 下载 600519 20250101~20260227（第3次）
+2026-02-28 21:15:41,083 [WARNING] data.provider: 下载 600519 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:15:41,083 [ERROR] data.provider: 下载 600519 失败，已重试 3 次
+2026-02-28 21:15:41,083 [WARNING] data.manager: [增量更新] 600519 联网补充失败（无法下载 600519 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))），使用已有缓存部分数据
+2026-02-28 21:15:41,116 [INFO] data.manager: [增量更新] 300750 本地数据到 20241231，请求到 20260227，尝试联网补充...
+2026-02-28 21:15:41,116 [INFO] data.provider: 下载 300750 20250101~20260227
+2026-02-28 21:15:41,221 [WARNING] data.provider: 下载 300750 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:15:41,221 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 21:15:51,228 [INFO] data.provider: 下载 300750 20250101~20260227（第2次）
+2026-02-28 21:15:51,363 [WARNING] data.provider: 下载 300750 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:15:51,363 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 21:16:06,366 [INFO] data.provider: 下载 300750 20250101~20260227（第3次）
+2026-02-28 21:16:06,511 [WARNING] data.provider: 下载 300750 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:16:06,512 [ERROR] data.provider: 下载 300750 失败，已重试 3 次
+2026-02-28 21:16:06,512 [WARNING] data.manager: [增量更新] 300750 联网补充失败（无法下载 300750 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))），使用已有缓存部分数据
+2026-02-28 21:16:06,531 [INFO] __main__:   贵州茅台(600519): 805 个交易日，2021-09-03 ~ 2024-12-31
+2026-02-28 21:16:06,531 [WARNING] __main__:   ⚠ 贵州茅台(600519) 数据只到 2024-12-31，未能覆盖回测结束日 20260227。（网络不通或东方财富限流，已使用现有缓存继续回测）
+2026-02-28 21:16:06,531 [INFO] __main__:   宁德时代(300750): 805 个交易日，2021-09-03 ~ 2024-12-31
+2026-02-28 21:16:06,531 [WARNING] __main__:   ⚠ 宁德时代(300750) 数据只到 2024-12-31，未能覆盖回测结束日 20260227。（网络不通或东方财富限流，已使用现有缓存继续回测）
+2026-02-28 21:16:06,531 [INFO] __main__: 开始回测...
+2026-02-28 21:16:06,531 [INFO] strategy.MACross: 策略[MACross]启动，初始资金: 1,000,000
+2026-02-28 21:16:06,537 [INFO] backtest.engine: 开始回测 [MACross] 20220101~20260227，共 726 个交易日
+2026-02-28 21:16:06,629 [WARNING] risk.manager: [风控] 移动止盈触发 300750：最高=295.83 当前=272.00 回落=-8.1%
+2026-02-28 21:16:06,683 [INFO] risk.manager: [风控] 削减买入 300750：原始=800股 → 调整=600股（仓位上限约束）
+2026-02-28 21:16:06,745 [INFO] risk.manager: [风控] 削减买入 300750：原始=600股 → 调整=400股（仓位上限约束）
+2026-02-28 21:16:06,777 [INFO] risk.manager: [风控] 削减买入 300750：原始=700股 → 调整=500股（仓位上限约束）
+2026-02-28 21:16:06,781 [WARNING] risk.manager: [风控] 止损触发 300750：成本=225.06 当前=209.74 亏损=-6.8%
+2026-02-28 21:16:06,839 [INFO] risk.manager: [风控] 削减买入 300750：原始=1300股 → 调整=1000股（仓位上限约束）
+2026-02-28 21:16:06,870 [INFO] risk.manager: [风控] 削减买入 300750：原始=800股 → 调整=600股（仓位上限约束）
+2026-02-28 21:16:06,908 [WARNING] risk.manager: [风控] 止损触发 300750：成本=181.95 当前=170.33 亏损=-6.4%
+2026-02-28 21:16:06,933 [WARNING] risk.manager: [风控] 移动止盈触发 600519：最高=1647.56 当前=1478.81 回落=-10.2%
+2026-02-28 21:16:06,966 [INFO] strategy.MACross: 策略[MACross]结束，总资产: 1,225,506.58
+2026-02-28 21:16:06,970 [INFO] backtest.engine: 回测完成 | 总收益=22.55% 最大回撤=-16.26% 夏普=0.345
+2026-02-28 21:16:06,972 [INFO] __main__: 正在生成回测图表...
+2026-02-28 21:16:08,137 [INFO] report.plotter: 回测图表已保存: ./reports\MACross_20260228.png
+2026-02-28 21:16:08,742 [INFO] __main__: 正在生成 K 线买卖点图...
+2026-02-28 21:16:13,789 [INFO] plot_trades: 已保存: ./reports\kline_600519_贵州茅台.png
+2026-02-28 21:16:18,516 [INFO] plot_trades: 已保存: ./reports\kline_300750_宁德时代.png

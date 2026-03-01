@@ -1,0 +1,23 @@
+2026-02-28 21:48:31,555 [INFO] strategy.MACross: 策略[MACross]启动，初始资金: 1,000,000
+2026-02-28 21:48:31,555 [INFO] main_signal: 正在加载历史数据...
+2026-02-28 21:48:31,556 [INFO] data.provider: 下载 600519 20250623~20260228
+2026-02-28 21:48:31,696 [WARNING] data.provider: 下载 600519 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:48:31,696 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 21:48:41,703 [INFO] data.provider: 下载 600519 20250623~20260228（第2次）
+2026-02-28 21:48:41,816 [WARNING] data.provider: 下载 600519 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:48:41,816 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 21:48:56,827 [INFO] data.provider: 下载 600519 20250623~20260228（第3次）
+2026-02-28 21:48:56,937 [WARNING] data.provider: 下载 600519 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:48:56,937 [ERROR] data.provider: 下载 600519 失败，已重试 3 次
+2026-02-28 21:48:56,937 [WARNING] main_signal:   600519 历史数据加载失败: 无法下载 600519 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:48:56,938 [INFO] data.provider: 下载 300750 20250623~20260228
+2026-02-28 21:48:57,049 [WARNING] data.provider: 下载 300750 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:48:57,049 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 21:49:07,056 [INFO] data.provider: 下载 300750 20250623~20260228（第2次）
+2026-02-28 21:49:07,197 [WARNING] data.provider: 下载 300750 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:49:07,197 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 21:49:22,199 [INFO] data.provider: 下载 300750 20250623~20260228（第3次）
+2026-02-28 21:49:22,314 [WARNING] data.provider: 下载 300750 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:49:22,314 [ERROR] data.provider: 下载 300750 失败，已重试 3 次
+2026-02-28 21:49:22,314 [WARNING] main_signal:   300750 历史数据加载失败: 无法下载 300750 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:49:22,315 [ERROR] main_signal: 无法加载任何历史数据，请检查 data_cache/ 目录

@@ -1,0 +1,39 @@
+2026-02-28 18:55:31,871 [INFO] __main__: 正在加载历史数据...
+2026-02-28 18:55:31,873 [INFO] data.manager: [增量更新] 600519 本地数据到 20241231，请求到 20260227，尝试联网补充...
+2026-02-28 18:55:31,873 [INFO] data.provider: 下载 600519 20250101~20260227
+2026-02-28 18:55:32,522 [WARNING] data.provider: 下载 600519 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 18:55:32,522 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 18:55:42,523 [INFO] data.provider: 下载 600519 20250101~20260227（第2次）
+2026-02-28 18:55:43,209 [WARNING] data.provider: 下载 600519 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 18:55:43,210 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 18:55:58,210 [INFO] data.provider: 下载 600519 20250101~20260227（第3次）
+2026-02-28 18:55:59,055 [WARNING] data.provider: 下载 600519 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 18:55:59,056 [ERROR] data.provider: 下载 600519 失败，已重试 3 次
+2026-02-28 18:55:59,056 [WARNING] data.manager: [增量更新] 600519 联网补充失败（无法下载 600519 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))），使用已有缓存部分数据
+2026-02-28 18:55:59,082 [INFO] data.manager: [增量更新] 300750 本地数据到 20241231，请求到 20260227，尝试联网补充...
+2026-02-28 18:55:59,083 [INFO] data.provider: 下载 300750 20250101~20260227
+2026-02-28 18:55:59,924 [WARNING] data.provider: 下载 300750 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 18:55:59,924 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 18:56:09,925 [INFO] data.provider: 下载 300750 20250101~20260227（第2次）
+2026-02-28 18:56:10,574 [WARNING] data.provider: 下载 300750 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 18:56:10,575 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 18:56:25,575 [INFO] data.provider: 下载 300750 20250101~20260227（第3次）
+2026-02-28 18:56:26,354 [WARNING] data.provider: 下载 300750 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 18:56:26,354 [ERROR] data.provider: 下载 300750 失败，已重试 3 次
+2026-02-28 18:56:26,354 [WARNING] data.manager: [增量更新] 300750 联网补充失败（无法下载 300750 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))），使用已有缓存部分数据
+2026-02-28 18:56:26,370 [INFO] __main__:   贵州茅台(600519): 805 个交易日，2021-09-03 ~ 2024-12-31
+2026-02-28 18:56:26,371 [WARNING] __main__:   ⚠ 贵州茅台(600519) 数据只到 2024-12-31，未能覆盖回测结束日 20260227。（网络不通或东方财富限流，已使用现有缓存继续回测）
+2026-02-28 18:56:26,373 [INFO] __main__:   宁德时代(300750): 805 个交易日，2021-09-03 ~ 2024-12-31
+2026-02-28 18:56:26,373 [WARNING] __main__:   ⚠ 宁德时代(300750) 数据只到 2024-12-31，未能覆盖回测结束日 20260227。（网络不通或东方财富限流，已使用现有缓存继续回测）
+2026-02-28 18:56:26,373 [INFO] __main__: 开始回测...
+2026-02-28 18:56:26,373 [INFO] strategy.MACross: 策略[MACross]启动，初始资金: 1,000,000
+2026-02-28 18:56:26,376 [INFO] backtest.engine: 开始回测 [MACross] 20220101~20260227，共 726 个交易日
+2026-02-28 18:56:26,410 [WARNING] risk.manager: [风控] 止损触发 300750：成本=290.91 当前=259.50 亏损=-10.8%
+2026-02-28 18:56:26,410 [WARNING] risk.manager: [风控] 移动止盈触发 300750：最高=295.83 当前=259.50 回落=-12.3%
+2026-02-28 18:56:26,540 [WARNING] risk.manager: [风控] 移动止盈触发 600519：最高=1672.56 当前=1447.06 回落=-13.5%
+2026-02-28 18:56:26,551 [INFO] strategy.MACross: 策略[MACross]结束，总资产: 1,057,547.58
+2026-02-28 18:56:26,553 [INFO] backtest.engine: 回测完成 | 总收益=5.75% 最大回撤=-9.75% 夏普=-0.066
+2026-02-28 18:56:26,554 [INFO] __main__: 正在生成回测图表...
+2026-02-28 18:56:26,554 [WARNING] report.plotter: matplotlib 未安装，跳过绘图。安装命令：pip install matplotlib
+2026-02-28 18:56:26,557 [INFO] __main__: 正在生成 K 线买卖点图...
+2026-02-28 18:56:26,562 [ERROR] __main__: K 线图生成失败: No module named 'matplotlib'

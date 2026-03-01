@@ -1,0 +1,31 @@
+2026-02-28 21:45:44,212 [INFO] strategy.MACross: 策略[MACross]启动，初始资金: 1,000,000
+2026-02-28 21:45:44,212 [INFO] main_signal: 正在加载历史数据...
+2026-02-28 21:45:44,214 [INFO] data.manager: [增量更新] 600519 本地数据到 20260227，请求到 20260228，尝试联网补充...
+2026-02-28 21:45:44,215 [INFO] data.provider: 下载 600519 20260228~20260228
+2026-02-28 21:45:44,343 [WARNING] data.provider: 下载 600519 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:45:44,343 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 21:45:54,356 [INFO] data.provider: 下载 600519 20260228~20260228（第2次）
+2026-02-28 21:45:54,476 [WARNING] data.provider: 下载 600519 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:45:54,476 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 21:46:09,490 [INFO] data.provider: 下载 600519 20260228~20260228（第3次）
+2026-02-28 21:46:09,628 [WARNING] data.provider: 下载 600519 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:46:09,628 [ERROR] data.provider: 下载 600519 失败，已重试 3 次
+2026-02-28 21:46:09,628 [WARNING] data.manager: [增量更新] 600519 联网补充失败（无法下载 600519 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))），使用已有缓存部分数据
+2026-02-28 21:46:09,636 [INFO] main_signal:   贵州茅台(600519): 166 条, 2025-06-23 ~ 2026-02-27
+2026-02-28 21:46:09,637 [INFO] data.manager: [增量更新] 300750 本地数据到 20260227，请求到 20260228，尝试联网补充...
+2026-02-28 21:46:09,638 [INFO] data.provider: 下载 300750 20260228~20260228
+2026-02-28 21:46:09,754 [WARNING] data.provider: 下载 300750 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:46:09,754 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 21:46:19,765 [INFO] data.provider: 下载 300750 20260228~20260228（第2次）
+2026-02-28 21:46:19,889 [WARNING] data.provider: 下载 300750 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:46:19,889 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 21:46:34,891 [INFO] data.provider: 下载 300750 20260228~20260228（第3次）
+2026-02-28 21:46:35,017 [WARNING] data.provider: 下载 300750 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 21:46:35,017 [ERROR] data.provider: 下载 300750 失败，已重试 3 次
+2026-02-28 21:46:35,017 [WARNING] data.manager: [增量更新] 300750 联网补充失败（无法下载 300750 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))），使用已有缓存部分数据
+2026-02-28 21:46:35,025 [INFO] main_signal:   宁德时代(300750): 166 条, 2025-06-23 ~ 2026-02-27
+2026-02-28 21:46:35,025 [INFO] main_signal: 历史数据加载完成，监控 2 只股票
+2026-02-28 21:46:35,025 [INFO] main_signal: 开始信号监控循环（Ctrl+C 退出）...
+2026-02-28 21:46:35,025 [INFO] main_signal: 非交易时间，休眠至下一交易时段（约 35小时38分钟）
+2026-02-28 21:48:30,183 [INFO] main_signal: 
+用户中断，信号监控已停止

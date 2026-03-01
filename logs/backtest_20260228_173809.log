@@ -1,0 +1,37 @@
+2026-02-28 17:38:09,156 [INFO] __main__: 正在加载历史数据...
+2026-02-28 17:38:09,163 [INFO] data.provider: 下载 600519 20210903~20241231
+2026-02-28 17:38:09,308 [WARNING] data.provider: 下载 600519 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:38:09,308 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 17:38:19,317 [INFO] data.provider: 下载 600519 20210903~20241231（第2次）
+2026-02-28 17:38:19,431 [WARNING] data.provider: 下载 600519 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:38:19,433 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 17:38:34,442 [INFO] data.provider: 下载 600519 20210903~20241231（第3次）
+2026-02-28 17:38:34,573 [WARNING] data.provider: 下载 600519 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:38:34,573 [ERROR] data.provider: 下载 600519 失败，已重试 3 次
+2026-02-28 17:38:34,573 [ERROR] data.manager: 获取 600519 失败，已跳过: 无法下载 600519 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:38:34,574 [INFO] data.provider: 下载 300750 20210903~20241231
+2026-02-28 17:38:34,697 [WARNING] data.provider: 下载 300750 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:38:34,697 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 17:38:44,710 [INFO] data.provider: 下载 300750 20210903~20241231（第2次）
+2026-02-28 17:38:44,824 [WARNING] data.provider: 下载 300750 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:38:44,824 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 17:38:59,826 [INFO] data.provider: 下载 300750 20210903~20241231（第3次）
+2026-02-28 17:38:59,946 [WARNING] data.provider: 下载 300750 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:38:59,946 [ERROR] data.provider: 下载 300750 失败，已重试 3 次
+2026-02-28 17:38:59,946 [ERROR] data.manager: 获取 300750 失败，已跳过: 无法下载 300750 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:38:59,947 [INFO] data.provider: 下载 000858 20210903~20241231
+2026-02-28 17:39:00,104 [WARNING] data.provider: 下载 000858 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:39:00,105 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 17:39:10,113 [INFO] data.provider: 下载 000858 20210903~20241231（第2次）
+2026-02-28 17:39:10,255 [WARNING] data.provider: 下载 000858 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:39:10,255 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 17:39:25,262 [INFO] data.provider: 下载 000858 20210903~20241231（第3次）
+2026-02-28 17:39:25,392 [WARNING] data.provider: 下载 000858 第3次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:39:25,392 [ERROR] data.provider: 下载 000858 失败，已重试 3 次
+2026-02-28 17:39:25,392 [ERROR] data.manager: 获取 000858 失败，已跳过: 无法下载 000858 数据，请检查网络。原始错误: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:39:25,394 [INFO] data.provider: 下载 601318 20210903~20241231
+2026-02-28 17:39:25,526 [WARNING] data.provider: 下载 601318 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:39:25,527 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 17:39:35,537 [INFO] data.provider: 下载 601318 20210903~20241231（第2次）
+2026-02-28 17:39:35,677 [WARNING] data.provider: 下载 601318 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:39:35,678 [WARNING] data.provider:   15秒后进行第 3 次重试...

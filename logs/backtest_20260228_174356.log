@@ -1,0 +1,9 @@
+2026-02-28 17:43:56,920 [INFO] __main__: 正在加载历史数据...
+2026-02-28 17:43:56,922 [INFO] data.manager: [缓存] 加载 600519
+2026-02-28 17:43:56,922 [INFO] data.manager: [缓存] 加载 300750
+2026-02-28 17:43:56,923 [INFO] data.provider: 下载 000858 20210903~20241231
+2026-02-28 17:43:57,042 [WARNING] data.provider: 下载 000858 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:43:57,043 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 17:44:07,052 [INFO] data.provider: 下载 000858 20210903~20241231（第2次）
+2026-02-28 17:44:07,202 [WARNING] data.provider: 下载 000858 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 17:44:07,202 [WARNING] data.provider:   15秒后进行第 3 次重试...

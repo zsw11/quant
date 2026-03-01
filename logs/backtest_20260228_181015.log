@@ -1,0 +1,16 @@
+2026-02-28 18:10:15,112 [INFO] __main__: 正在加载历史数据...
+2026-02-28 18:10:15,123 [INFO] data.manager: [增量更新] 600519 本地数据到 20260227，请求到 20260228，尝试联网补充...
+2026-02-28 18:10:15,124 [INFO] data.provider: [东方财富] 下载 600519 20260228~20260228
+2026-02-28 18:10:15,252 [WARNING] data.provider: [东方财富] 600519 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 18:10:17,253 [INFO] data.provider: [新浪财经] 下载 600519 20260228~20260228
+2026-02-28 18:10:17,739 [WARNING] data.provider: [新浪财经] 600519 失败: 新浪财经 返回数据为空
+2026-02-28 18:10:19,748 [INFO] data.provider: [腾讯证券] 下载 600519 20260228~20260228
+2026-02-28 18:10:21,846 [WARNING] data.provider: [腾讯证券] 600519 失败: 腾讯证券 返回数据为空
+2026-02-28 18:10:23,857 [ERROR] data.provider: 所有数据源均失败 600519
+2026-02-28 18:10:23,858 [WARNING] data.manager: [增量更新] 600519 联网补充失败（无法下载 600519 数据，三个数据源全部失败。最后错误: 腾讯证券 返回数据为空），使用已有缓存部分数据
+2026-02-28 18:10:23,878 [INFO] data.manager: [增量更新] 300750 本地数据到 20260227，请求到 20260228，尝试联网补充...
+2026-02-28 18:10:23,878 [INFO] data.provider: [东方财富] 下载 300750 20260228~20260228
+2026-02-28 18:10:23,998 [WARNING] data.provider: [东方财富] 300750 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 18:10:26,008 [INFO] data.provider: [新浪财经] 下载 300750 20260228~20260228
+2026-02-28 18:10:26,599 [WARNING] data.provider: [新浪财经] 300750 失败: 新浪财经 返回数据为空
+2026-02-28 18:10:28,614 [INFO] data.provider: [腾讯证券] 下载 300750 20260228~20260228

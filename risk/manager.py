@@ -79,7 +79,11 @@ class RiskManager:
                 f"回撤={(total - self._peak_equity)/self._peak_equity*100:.1f}%，"
                 f"执行全仓清仓"
             )
-            return self._build_liquidate_all(strategy, prices)
+            liquidate_signals = self._build_liquidate_all(strategy, prices)
+            # 清仓后重置峰值为当前净值，允许策略恢复交易
+            # 否则峰值永远停留在高点，策略将被永久锁死
+            self._peak_equity = total
+            return liquidate_signals
 
         # 过滤买入信号（检查仓位限制，超限时削减数量而非直接拒绝）
         approved: List[Signal] = []

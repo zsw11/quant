@@ -1,0 +1,19 @@
+2026-02-28 17:40:01,039 [INFO] __main__: 正在加载历史数据...
+2026-02-28 17:40:01,046 [INFO] data.provider: 下载 600519 20210903~20241231
+2026-02-28 17:40:05,086 [INFO] data.provider: 下载成功 600519：805 条 (2021-09-03 ~ 2024-12-31)
+2026-02-28 17:40:05,105 [INFO] data.provider: 下载 300750 20210903~20241231
+2026-02-28 17:40:07,276 [INFO] data.provider: 下载成功 300750：805 条 (2021-09-03 ~ 2024-12-31)
+2026-02-28 17:40:07,287 [INFO] data.provider: 下载 000858 20210903~20241231
+2026-02-28 17:40:09,440 [WARNING] data.provider: 下载 000858 第1次失败: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.000858&beg=20210903&end=20241231 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2026-02-28 17:40:09,440 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 17:40:19,446 [INFO] data.provider: 下载 000858 20210903~20241231（第2次）
+2026-02-28 17:40:22,887 [WARNING] data.provider: 下载 000858 第2次失败: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.000858&beg=20210903&end=20241231 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2026-02-28 17:40:22,887 [WARNING] data.provider:   15秒后进行第 3 次重试...
+2026-02-28 17:40:37,898 [INFO] data.provider: 下载 000858 20210903~20241231（第3次）
+2026-02-28 17:40:41,403 [WARNING] data.provider: 下载 000858 第3次失败: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.000858&beg=20210903&end=20241231 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2026-02-28 17:40:41,403 [ERROR] data.provider: 下载 000858 失败，已重试 3 次
+2026-02-28 17:40:41,403 [ERROR] data.manager: 获取 000858 失败，已跳过: 无法下载 000858 数据，请检查网络。原始错误: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=0.000858&beg=20210903&end=20241231 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2026-02-28 17:40:41,404 [INFO] data.provider: 下载 601318 20210903~20241231
+2026-02-28 17:40:42,936 [WARNING] data.provider: 下载 601318 第1次失败: HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=7eea3edcaed734bea9cbfc24409ed989&klt=101&fqt=1&secid=1.601318&beg=20210903&end=20241231 (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2026-02-28 17:40:42,936 [WARNING] data.provider:   10秒后进行第 2 次重试...
+2026-02-28 17:40:52,945 [INFO] data.provider: 下载 601318 20210903~20241231（第2次）

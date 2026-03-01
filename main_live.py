@@ -8,8 +8,10 @@
     GM_TOKEN    = "你的掘金Token"
     ACCOUNT_ID  = "你的账户ID"
     STRATEGY_ID = "你的策略ID"
-    TRADE_MODE  = "paper"   # 模拟盘（推荐先用模拟盘验证）
-                # "live"    # 实盘（真实下单，请谨慎！）
+    TRADE_MODE  = "paper"    # 模拟盘（推荐先用模拟盘验证）
+                 # "live"    # 实盘（真实下单，请谨慎！）
+    SIGNAL_MODE = "notify"   # 仅提醒（红色弹窗+声音，不自动下单）
+                 # "auto"    # 自动下单（配合 TRADE_MODE 使用）
 
 掘金量化回调函数说明：
     init(context)           - 策略初始化，设置Token，订阅K线
@@ -17,10 +19,12 @@
     on_order_status(...)    - 委托回报（成交/撤单/拒单）
     on_error(...)           - 错误回调
 
-下单逻辑：
-    主策略（MACross）  → 生成信号 → 若 quantity > 0 → 调用 broker 真实下单
-    观察策略（MACD）   → 生成信号 → 仅打印日志，不下单
-    观察策略（布林带） → 生成信号 → 仅打印日志，不下单
+信号执行逻辑：
+    SIGNAL_MODE = "notify":
+        主策略（MACross）  → 生成信号 → 红色醒目提醒+声音+弹窗 → 不下单
+    SIGNAL_MODE = "auto":
+        主策略（MACross）  → 生成信号 → 调用 broker 下单 → 成功后提醒
+    观察策略（MACD/布林带） → 生成信号 → 仅打印日志，不下单
 """
 import sys
 import os
@@ -38,6 +42,7 @@ from strategy.macd import MACDStrategy
 from strategy.boll import BollStrategy
 from risk.manager import RiskManager
 from broker.paper import PaperBroker
+from notifier import notify_signal
 
 # 尝试导入掘金实盘 Broker（未安装 SDK 时降级为模拟盘）
 try:
@@ -114,9 +119,16 @@ def init(context):
 
     _logger = _setup_logging()
 
+    signal_mode = getattr(config, 'SIGNAL_MODE', 'auto')
+    mode_desc = {
+        'notify': '仅提醒（不自动下单，红色弹窗提示）',
+        'auto':   '自动下单',
+    }.get(signal_mode, signal_mode)
+
     _logger.info("=" * 50)
     _logger.info("A股量化交易系统启动")
     _logger.info(f"运行模式: {'实盘' if config.TRADE_MODE == 'live' else '模拟盘'}")
+    _logger.info(f"信号模式: {mode_desc}")
     _logger.info(f"监控标的: {', '.join(config.SYMBOLS_GM)}")
     _logger.info("=" * 50)
 
@@ -242,6 +254,8 @@ def on_bar(context, bars):
             main_signals = stop_signals
 
     # 执行信号
+    signal_mode = getattr(config, 'SIGNAL_MODE', 'auto')
+
     for sig in main_signals:
         if sig.quantity <= 0:
             continue   # 防御：quantity=0 的信号不下单
@@ -251,6 +265,12 @@ def on_bar(context, bars):
             f"x{sig.quantity} | {sig.reason}"
         )
 
+        # ---- notify 模式：只提醒，不下单 ----
+        if signal_mode == "notify":
+            notify_signal(sig, prices)
+            continue
+
+        # ---- auto 模式：自动下单 ----
         if sig.action == "BUY":
             result = _broker.buy(sig.symbol, sig.quantity, sig.price)
         elif sig.action == "SELL":
@@ -264,6 +284,9 @@ def on_bar(context, bars):
                 f"x{result.filled_qty} @{result.filled_price:.2f} "
                 f"手续费={result.commission:.2f}"
             )
+            # 下单成功后也弹出提醒（auto 模式下作为确认通知）
+            notify_signal(sig, prices)
+
             # 更新策略内部状态（模拟盘立即成交；实盘等 on_order_status 回报）
             if config.TRADE_MODE == "paper":
                 sig.quantity = result.filled_qty
@@ -406,8 +429,12 @@ def main():
 
     mode = MODE_LIVE   # 掘金 MODE_LIVE 对应实盘和模拟盘（由账户类型决定）
 
+    sig_mode = getattr(config, 'SIGNAL_MODE', 'auto')
+    sig_mode_cn = '仅提醒（不自动下单）' if sig_mode == 'notify' else '自动下单'
+
     print("=" * 60)
     print(f"  A股量化交易系统 - {'实盘' if config.TRADE_MODE == 'live' else '模拟盘'}模式")
+    print(f"  信号模式: {sig_mode_cn}")
     print(f"  策略: 双均线 MA{config.MA_FAST}/MA{config.MA_SLOW}")
     print(f"  标的: {' + '.join(config.SYMBOLS_GM)}")
     print(f"  K线: {config.BAR_FREQUENCY}（每根K线触发一次策略）")

@@ -1,0 +1,38 @@
+2026-02-28 22:03:29,330 [INFO] __main__: 正在加载历史数据...
+2026-02-28 22:03:29,332 [INFO] data.provider: [东方财富] 下载 600519 20210903~20260227
+2026-02-28 22:03:29,785 [WARNING] data.provider: [东方财富] 600519 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 22:03:35,785 [INFO] data.provider: [东方财富] 下载 600519 20210903~20260227（第2次）
+2026-02-28 22:03:36,222 [WARNING] data.provider: [东方财富] 600519 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 22:03:36,222 [INFO] data.provider: 东方财富不可用，切换到腾讯数据源...
+2026-02-28 22:03:36,222 [INFO] data.provider: [腾讯] 下载 600519（sh600519）...
+2026-02-28 22:03:37,520 [INFO] data.provider: [腾讯] 下载成功 600519：1082 条 (2021-09-03 ~ 2026-02-27)
+2026-02-28 22:03:37,526 [INFO] data.provider: [东方财富] 下载 300750 20210903~20260227
+2026-02-28 22:03:37,956 [WARNING] data.provider: [东方财富] 300750 第1次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 22:03:43,956 [INFO] data.provider: [东方财富] 下载 300750 20210903~20260227（第2次）
+2026-02-28 22:03:44,389 [WARNING] data.provider: [东方财富] 300750 第2次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-02-28 22:03:44,389 [INFO] data.provider: 东方财富不可用，切换到腾讯数据源...
+2026-02-28 22:03:44,389 [INFO] data.provider: [腾讯] 下载 300750（sz300750）...
+2026-02-28 22:03:45,677 [INFO] data.provider: [腾讯] 下载成功 300750：1082 条 (2021-09-03 ~ 2026-02-27)
+2026-02-28 22:03:45,682 [INFO] __main__:   贵州茅台(600519): 1082 个交易日，2021-09-03 ~ 2026-02-27
+2026-02-28 22:03:45,682 [INFO] __main__:   宁德时代(300750): 1082 个交易日，2021-09-03 ~ 2026-02-27
+2026-02-28 22:03:45,682 [INFO] __main__: 开始回测...
+2026-02-28 22:03:45,682 [INFO] strategy.MACross: 策略[MACross]启动，初始资金: 1,000,000
+2026-02-28 22:03:45,685 [INFO] backtest.engine: 开始回测 [MACross] 20220101~20260227，共 1003 个交易日
+2026-02-28 22:03:45,716 [WARNING] risk.manager: [风控] 移动止盈触发 300750：最高=291.23 当前=265.02 回落=-9.0%
+2026-02-28 22:03:45,733 [INFO] risk.manager: [风控] 削减买入 300750：原始=700股 → 调整=500股（仓位上限约束）
+2026-02-28 22:03:45,755 [INFO] risk.manager: [风控] 削减买入 300750：原始=500股 → 调整=300股（仓位上限约束）
+2026-02-28 22:03:45,765 [INFO] risk.manager: [风控] 削减买入 300750：原始=600股 → 调整=400股（仓位上限约束）
+2026-02-28 22:03:45,766 [WARNING] risk.manager: [风控] 止损触发 300750：成本=224.78 当前=210.22 亏损=-6.5%
+2026-02-28 22:03:45,786 [INFO] risk.manager: [风控] 削减买入 300750：原始=1000股 → 调整=700股（仓位上限约束）
+2026-02-28 22:03:45,797 [INFO] risk.manager: [风控] 削减买入 300750：原始=600股 → 调整=400股（仓位上限约束）
+2026-02-28 22:03:45,810 [WARNING] risk.manager: [风控] 止损触发 300750：成本=183.49 当前=172.17 亏损=-6.2%
+2026-02-28 22:03:45,819 [WARNING] risk.manager: [风控] 移动止盈触发 600519：最高=1636.00 当前=1475.78 回落=-9.8%
+2026-02-28 22:03:45,857 [WARNING] risk.manager: [风控] 移动止盈触发 300750：最高=290.77 当前=263.67 回落=-9.3%
+2026-02-28 22:03:45,866 [WARNING] risk.manager: [风控] 移动止盈触发 300750：最高=409.89 当前=374.50 回落=-8.6%
+2026-02-28 22:03:45,868 [INFO] risk.manager: [风控] 削减买入 300750：原始=300股 → 调整=200股（仓位上限约束）
+2026-02-28 22:03:45,884 [INFO] strategy.MACross: 策略[MACross]结束，总资产: 1,204,471.29
+2026-02-28 22:03:45,885 [INFO] backtest.engine: 回测完成 | 总收益=20.45% 最大回撤=-16.38% 夏普=0.186
+2026-02-28 22:03:45,886 [INFO] __main__: 正在生成回测图表...
+2026-02-28 22:03:45,886 [WARNING] report.plotter: matplotlib 未安装，跳过绘图。安装命令：pip install matplotlib
+2026-02-28 22:03:45,890 [INFO] __main__: 正在生成 K 线买卖点图...
+2026-02-28 22:03:45,893 [ERROR] __main__: K 线图生成失败: No module named 'matplotlib'
